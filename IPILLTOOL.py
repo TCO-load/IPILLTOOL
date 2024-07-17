@@ -453,43 +453,81 @@ class NetworkManager:
             print(f"{Fore.RED}Erreur lors de la gestion du pare-feu{Style.RESET_ALL}")
 
     def config_adv_firewall(self):
-        print(f"{Fore.YELLOW}Configuration avancée du pare-feu non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Configuration avancée du pare-feu...{Style.RESET_ALL}")
+        os.system("control firewall.cpl")
+        print(f"{Fore.GREEN}L'interface de configuration du pare-feu Windows a été ouverte.{Style.RESET_ALL}")
 
     def manage_certs(self):
-        print(f"{Fore.YELLOW}Gestion des certificats non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Gestion des certificats de sécurité...{Style.RESET_ALL}")
+        os.system("certmgr.msc")
+        print(f"{Fore.GREEN}Le gestionnaire de certificats a été ouvert.{Style.RESET_ALL}")
 
     def config_ipsec(self):
-        print(f"{Fore.YELLOW}Configuration IPsec non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Configuration IPsec...{Style.RESET_ALL}")
+        os.system("secpol.msc")
+        print(f"{Fore.GREEN}La politique de sécurité locale a été ouverte. Configurez IPsec dans 'Politiques de sécurité IP'.{Style.RESET_ALL}")
 
     def config_8021x(self):
-        print(f"{Fore.YELLOW}Configuration 802.1X non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Configuration de l'authentification 802.1X...{Style.RESET_ALL}")
+        os.system("ncpa.cpl")
+        print(f"{Fore.GREEN}Les connexions réseau ont été ouvertes. Configurez 802.1X dans les propriétés de l'interface.{Style.RESET_ALL}")
 
     def advanced_net_security(self):
-        print(f"{Fore.YELLOW}Paramètres de sécurité réseau avancés non implémentés.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Paramètres de sécurité réseau avancés...{Style.RESET_ALL}")
+        os.system("gpedit.msc")
+        print(f"{Fore.GREEN}L'éditeur de stratégie de groupe a été ouvert. Naviguez vers 'Configuration ordinateur > Paramètres Windows > Paramètres de sécurité'.{Style.RESET_ALL}")
 
     def config_parental_control(self):
-        print(f"{Fore.YELLOW}Configuration du contrôle parental non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Configuration du contrôle parental réseau...{Style.RESET_ALL}")
+        os.system("control /name Microsoft.ParentalControls")
+        print(f"{Fore.GREEN}Les paramètres de contrôle parental de Windows ont été ouverts.{Style.RESET_ALL}")
 
     def manage_tcpip(self):
-        print(f"{Fore.YELLOW}Gestion des paramètres TCP/IP avancés non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Gestion des paramètres TCP/IP avancés...{Style.RESET_ALL}")
+        os.system("ncpa.cpl")
+        print(f"{Fore.GREEN}Les connexions réseau ont été ouvertes. Configurez les paramètres TCP/IP avancés dans les propriétés de l'interface.{Style.RESET_ALL}")
 
     def config_qos(self):
-        print(f"{Fore.YELLOW}Configuration de la QoS non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Configuration de la qualité de service (QoS)...{Style.RESET_ALL}")
+        os.system("gpedit.msc")
+        print(f"{Fore.GREEN}L'éditeur de stratégie de groupe a été ouvert. Naviguez vers 'Configuration ordinateur > Modèles d'administration > Réseau > Ordonnanceur de paquets QoS'.{Style.RESET_ALL}")
 
     def manage_vpn(self):
-        print(f"{Fore.YELLOW}Gestion des connexions VPN non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Gestion des connexions VPN...{Style.RESET_ALL}")
+        os.system("rasphone -f")
+        print(f"{Fore.GREEN}Le gestionnaire de connexions à distance a été ouvert.{Style.RESET_ALL}")
 
     def config_rras(self):
-        print(f"{Fore.YELLOW}Configuration du routage et accès distant non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Configuration du routage et de l'accès distant...{Style.RESET_ALL}")
+        os.system("rundll32.exe shell32.dll,Control_RunDLL remotepg.dll,LaunchRASUI")
+        print(f"{Fore.GREEN}L'interface de configuration du routage et de l'accès distant a été ouverte.{Style.RESET_ALL}")
 
     def manage_net_protocols(self):
-        print(f"{Fore.YELLOW}Gestion des protocoles réseau non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Gestion des protocoles réseau...{Style.RESET_ALL}")
+        os.system("ncpa.cpl")
+        print(f"{Fore.GREEN}Les connexions réseau ont été ouvertes. Configurez les protocoles dans les propriétés de l'interface.{Style.RESET_ALL}")
 
     def configure_net_gpo(self):
-        print(f"{Fore.YELLOW}Configuration des stratégies de groupe réseau non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Configuration des stratégies de groupe réseau...{Style.RESET_ALL}")
+        os.system("gpedit.msc")
+        print(f"{Fore.GREEN}L'éditeur de stratégie de groupe a été ouvert.{Style.RESET_ALL}")
 
     def manage_virtual_nics(self):
-        print(f"{Fore.YELLOW}Gestion des cartes réseau virtuelles non implémentée.{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}Gestion des cartes réseau virtuelles...{Style.RESET_ALL}")
+        os.system("ncpa.cpl")
+        print(f"{Fore.GREEN}Les connexions réseau ont été ouvertes. Gérez les cartes réseau virtuelles ici.{Style.RESET_ALL}")
+
+    def manage_guest_wifi(self):
+        print(f"{Fore.YELLOW}Gestion des accès Wi-Fi invités...{Style.RESET_ALL}")
+        print(f"{Fore.GREEN}Pour configurer un réseau Wi-Fi invité, utilisez les commandes suivantes :{Style.RESET_ALL}")
+        print("1. netsh wlan set hostednetwork mode=allow ssid=NomDuReseau key=MotDePasse")
+        print("2. netsh wlan start hostednetwork")
+        print(f"{Fore.YELLOW}Remplacez 'NomDuReseau' et 'MotDePasse' par vos propres valeurs.{Style.RESET_ALL}")
+
+    def manage_rdp(self):
+        print(f"{Fore.YELLOW}Gestion des connexions RDP...{Style.RESET_ALL}")
+        os.system("SystemPropertiesRemote.exe")
+        print(f"{Fore.GREEN}Les paramètres d'accès à distance ont été ouverts.{Style.RESET_ALL}")
 
     def flush_dns(self):
         try:
