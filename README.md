@@ -22,8 +22,8 @@ IPILLTOOL est un outil de gestion de réseau avancé conçu pour simplifier les 
 - 📉 Analyser la bande passante
 - 🔎 Scanner les ports ouverts
 - 🔬 Analyser le trafic réseau
-- 🩺 Diagnostiquer et réparer le réseau
-- 🛡️ Analyser les vulnérabilités réseau
+- 🩺 Diagnostiquer et réparer le réseau // NE MARCHE PAS
+- 🛡️ Analyser les vulnérabilités réseau // NE MARCHE PAS
 
 #### Sécurité réseau
 - 🧱 Gérer les règles du pare-feu
@@ -38,7 +38,7 @@ IPILLTOOL est un outil de gestion de réseau avancé conçu pour simplifier les 
 #### Configuration avancée
 - 🌐 Gestion des paramètres TCP/IP avancés
 - ⚖️ Configuration de la qualité de service (QoS)
-- 🔐 Gestion des connexions VPN
+- 🔐 Gestion des connexions VPN // NE MARCHE PAS
 - 🛣️ Configuration du routage et de l'accès distant
 - 📡 Gestion des protocoles réseau
 - 📋 Configuration des stratégies de groupe réseau
