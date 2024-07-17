@@ -60,11 +60,16 @@ IPILLTOOL est un outil de gestion de réseau avancé conçu pour simplifier les 
 - Privilèges administrateur
 
 ## 🛠️ Installation
+
 1. Clonez ce dépôt :
 git clone https://github.com/votre-username/IPILLTOOL.git
-Copy2. Naviguez dans le dossier du projet :
+
+Ou téléchargez les fichiers 
+
+Naviguez dans le dossier du projet :
 cd IPILLTOOL
-Copy3. Exécutez le fichier `start.bat` pour installer les dépendances et lancer le programme.
+
+Exécutez le fichier `start.bat` pour installer les dépendances et lancer le programme.
 
 ## 🖥️ Utilisation
 Double-cliquez sur `start.bat` pour lancer IPILLTOOL avec les privilèges administrateur nécessaires.
